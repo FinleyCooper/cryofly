@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101318" />
+    <link rel="icon" href="/favicon.ico"/>
+    <meta
+      name="description"
+      content="A minimalistic, clean, and highly customisable version of Firefly"
+    />
+    <title>CryoFly – Better Than Firefly</title>
+    <script>
+        const BASE_URL = '/';
+        const fontKey = "static/media/NotoSans-Light.ttf"
+
+        fetch(`${BASE_URL}asset-manifest.json`)
+        .then((resp) => resp.json())
+        .then((data) => {
+            const font = new FontFace("Noto Sans", `url(${data.files[fontKey]})`);
+            font.load().then(() => document.fonts.add(font))
+        });
+    </script>
+    <style>
+        body {
+            margin: 0;
+            background-color: #101318;
+            font-family: "Noto Sans", sans-serif;
+            color: #ffffff;
+            height: 100vh;
+            width: 100vw;
+        }
+        header {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .login-signup-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-signup-container > a {
+            color: inherit;
+            font-size: 1.02em;
+            margin: 10px;
+            padding: 9px;
+            cursor: pointer;
+            width: 60px;
+            text-align: center;
+            text-decoration: none;
+        }
+        .signup {
+            border: #ffffff 1.5px solid;
+            border-radius: 8px;
+        }
+        .page-content {
+            width: 100%;
+            height: calc(100% - 70px);
+            display: flex;
+            justify-content: center;
+        }
+        .title {
+            margin-top: 280px;
+            text-align: center;
+        }
+        .sub-title {
+            color: #95989d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>CryoFly</h1>
+        </div>
+        <div class="login-signup-container">
+            <a href="/login" class="login">Login</a>
+            <a href="/signup" class="signup">Sign up</a>
+        </div>
+    </header>
+    <div class="page-content">
+        <div class="title">
+            <h1>CryoFly – Better Than Firefly </h1>
+            <p class="sub-title">A faster, minimalistic, and customisable alternative to Firefly</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+.settings-page {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.settings-container {
+    width: 500px;
+    padding: 25px 50px 25px 50px;
+    background-color: #1c222b;
+}
+
+.settings-title {
+    font-weight: normal;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.save-options {
+    color: #ffffff;
+    background-color: #2e7ad1;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    font-size: 1.05em;
+    border-radius: 20px;
+    margin-top: 15px;
+    cursor: pointer;
+}

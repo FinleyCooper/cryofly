@@ -1,0 +1,108 @@
+.timetable-page {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.timetable-container {
+    display: flex;
+    padding: 100px 0 100px 0;
+}
+
+.day-column {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15%;
+    justify-content: center;
+}
+
+.day {
+    text-align: center;
+    padding-right: 15px;
+}
+
+.timetable {
+    display: flex;
+    flex-direction: column;
+    width: max(850px, 50vw);
+    position: relative;
+}
+
+.timetable-day {
+    flex: 1;
+}
+
+.lessons {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.period-row {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    background-color: #101318;
+    align-items: center;
+}
+
+.period {
+    flex: 1;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.week-changer {
+    height: 55px;
+    width: 110px;
+    text-align: center;
+    color: #ffffff;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 35px);
+    margin: 25px;
+    background-color: #1f4f86;
+    font-size: 1.05em;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.lesson::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+.lesson.computing::before {
+    border-left: #8063ff 7px solid;
+}
+.lesson.double-maths::before {
+    border-left: #ff953f 7px solid;
+}
+.lesson.physics::before {
+    border-left: #12a0ff 7px solid;
+}
+.lesson.electives::before {
+    border-left: #2cffc0 7px solid;
+}
+.lesson.extended-project::before {
+    border-left: #ff5757 7px solid;
+}
+
+.lesson {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95em;
+    border: 1px #fff solid;
+}
+
+
